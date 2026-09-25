@@ -1,0 +1,30 @@
+slug: checkout-promo-order
+intent: "Add hoodie ($98.00) to cart, apply 20% promo code AURA20, verify pre-tax discount order, and complete checkout"
+lane: checkout
+covers:
+  - checkout-discount-order
+  - free-shipping-threshold
+probes:
+  - viewport: desktop-1280x800
+steps:
+  - action: goto
+    url: "/"
+  - action: click
+    selector: '[data-testid="add-to-cart-aura-cloud-hoodie"]'
+  - action: fill
+    selector: '#promo-input'
+    value: "AURA20"
+  - action: click
+    selector: '#apply-promo-btn'
+  - action: assert_text
+    selector: '#summary-subtotal'
+    expected: "$98.00"
+  - action: assert_text
+    selector: '#summary-shipping'
+    expected: "FREE"
+  - action: click
+    selector: '[data-testid="checkout-btn"]'
+  - action: click
+    selector: '[data-testid="place-order-btn"]'
+  - action: assert_visible
+    selector: '[data-testid="confirmation-card"]'

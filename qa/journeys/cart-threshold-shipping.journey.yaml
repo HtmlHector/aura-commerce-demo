@@ -1,0 +1,23 @@
+slug: cart-threshold-shipping
+intent: "Add bottle ($36.00), verify standard $7.00 shipping, increment quantity to 3 ($108.00), verify shipping flips to FREE"
+lane: cart
+covers:
+  - free-shipping-threshold
+  - cart-quantity-sync
+probes:
+  - viewport: desktop-1280x800
+steps:
+  - action: goto
+    url: "/"
+  - action: click
+    selector: '[data-testid="add-to-cart-aura-velocity-bottle"]'
+  - action: assert_text
+    selector: '#summary-shipping'
+    expected: "$7.00"
+  - action: click
+    selector: '[data-testid="qty-plus"]'
+  - action: click
+    selector: '[data-testid="qty-plus"]'
+  - action: assert_text
+    selector: '#summary-shipping'
+    expected: "FREE"

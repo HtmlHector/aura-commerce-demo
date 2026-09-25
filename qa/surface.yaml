@@ -1,0 +1,13 @@
+name: "Aura Commerce Storefront"
+repo: "HtmlHector/aura-commerce-demo"
+path: "/"
+inferred_stack: "Node.js / Tailwind CSS / Vanilla JS"
+preview_provider: "vercel"
+default_target: "http://localhost:3000"
+lanes:
+  - name: "catalog"
+    description: "Product discovery, category filtering, search"
+  - name: "cart"
+    description: "Cart drawer, quantity mutations, shipping calculation"
+  - name: "checkout"
+    description: "Checkout form, promo code discounts, order confirmation"

@@ -1,0 +1,16 @@
+# Traceback Quality Gate Policy
+gate:
+  block_on_sacred: true
+  min_confidence: 0.85
+  flaky_retry_count: 2
+
+judge:
+  default_density: "normal"
+  attach_failure_clips: true
+  clip_duration_seconds: 3
+
+self_healing:
+  enabled: true
+  allow_locator_repair: true
+  auto_merge_repairs: false
+  require_review_on_assertion_drift: true

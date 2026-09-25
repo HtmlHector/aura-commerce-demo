@@ -1,0 +1,16 @@
+slug: mobile-navigation-smoke
+intent: "Verify responsive mobile layout renders catalog and opens cart drawer on mobile-390x844"
+lane: catalog
+covers:
+  - responsive-catalog
+probes:
+  - viewport: mobile-390x844
+steps:
+  - action: goto
+    url: "/"
+  - action: assert_visible
+    selector: '[data-testid="product-card-aura-aero-tee"]'
+  - action: click
+    selector: '[data-testid="add-to-cart-aura-aero-tee"]'
+  - action: assert_visible
+    selector: '#cart-drawer'

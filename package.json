@@ -1,0 +1,12 @@
+{
+  "name": "aura-commerce-demo",
+  "version": "1.0.0",
+  "description": "Aura Commerce - Spec-Driven E-Commerce Demo Store for Traceback QA V2",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
