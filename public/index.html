@@ -176,8 +176,8 @@
           const res = window.store.applyPromo(input.value);
           msg.textContent = res.message;
           msg.className = res.success ? 'text-xs text-emerald-600 font-medium' : 'text-xs text-rose-500 font-medium';
-        " class="bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition" data-testid="apply-promo-btn" id="apply-promo-btn">
-          Apply
+        " class="btn-promo-apply bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow-sm">
+          Apply Promo
         </button>
       </div>
       <p id="promo-msg" class="text-xs"></p>

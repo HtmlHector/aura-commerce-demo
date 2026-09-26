@@ -15,7 +15,7 @@ steps:
     selector: '#promo-input'
     value: "AURA20"
   - action: click
-    selector: '#apply-promo-btn'
+    selector: '.btn-promo-apply'
   - action: assert_text
     selector: '#summary-subtotal'
     expected: "$98.00"

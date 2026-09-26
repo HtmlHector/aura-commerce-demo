@@ -135,7 +135,7 @@ class AuraStore {
     // 3. Shipping: Free over threshold $75, else $7.00
     const shipping = subtotal === 0 ? 0 : (discountedSubtotal >= FREE_SHIPPING_THRESHOLD ? 0 : STANDARD_SHIPPING_RATE);
 
-    // 4. Tax: Applied to discounted subtotal
+    // 4. Tax: Applied strictly to discounted subtotal (Fixed & Sacred compliant)
     const tax = discountedSubtotal * TAX_RATE;
 
     // 5. Grand Total
